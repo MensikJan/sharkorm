@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SharkORM",
-            targets: ["SharkORM"]),
+            targets: ["SharkORM","SharkORMTests"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,9 +24,11 @@ let package = Package(
         .target(
             name: "SharkORM",
             dependencies: [],
-            path: "SharkORM/SharkORM"),
-        .testTarget(
+            path: "SharkORM"),
+        .target(
             name: "SharkORMTests",
-            dependencies: ["SharkORM"],
+            dependencies: [],
+            path: "SharkORMTests")
     ]
 )
+
